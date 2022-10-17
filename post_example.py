@@ -923,3 +923,191 @@ col_3 = all(map(true_x, P[2::3]))
 
 print(row_1, row_2, row_3)
 print(col_1, col_2, col_3)
+
+
+# matndan ovozga
+# import pyttsx3
+# import os
+# dis2 = pyttsx3.init()
+# dis2.setProperty('rate', 150)
+# dis2.setProperty('volume', 0.7)
+# fil=open('aql.txt', 'r')
+# matn=fil.read()
+# # matn = input("Matn kiriting: ")
+# dis2.say("Assalomu alaykum! Pythonda TTS dan foydalanish.")
+# dis2.say(matn)
+# dis2.save_to_file(matn,'test.mp3')
+# dis2.runAndWait()
+# os.system('music/test.mp3')
+
+# class Person:
+#     def __init__(self, first_name, last_name, age):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age = age
+
+#     def info(self):
+#         return f"Name: {self.first_name}\nSurname: {self.last_name}\nAge: {self.age}"
+
+# class Student(Person):
+#     def __init__(self, first_name, last_name, age, group):
+#         super().__init__(first_name, last_name, age)
+#         self.group = group
+
+#     def info(self):
+#         return f"Name: {self.first_name}\nSurname: {self.last_name}\nAge: {self.age}\nGroup: {self.group}"
+
+# student = Student("Ali", "Olimov", 23, "9-19")
+# print(student.info())
+
+# n = int(input("Enter the number: "))
+# suma = 0
+# mult = 1
+ 
+# while n > 0:
+#     digit = n % 10
+#     suma = suma + digit
+#     mult = mult * digit
+#     n = n // 10
+ 
+# print("Total:", suma)
+# print("Multiplication:", mult)
+
+
+# from random import randint
+# from math import log10, floor
+
+# def human_format(num, ends=["", "K", "M", "B", "T"]):
+#     # divides by 3 to separate into thousands (...000)
+# 	return ends[int(floor(log10(num))/3)]
+
+# if __name__ == '__main__':
+#     for i in range(10):
+#         x = randint(1,10**i)
+#         print(x, human_format(x))
+
+
+####################################################
+
+# from collections import Counter, defaultdict
+
+# def build_counter(word):
+#     counter = defaultdict(int)
+#     for char in word:
+#         counter[char] += 1
+#     return counter
+
+# def is_anogram(word1:str, word2:str) -> bool:
+
+#     counter1 = Counter(word1)
+#     counter2 = Counter(word2)
+#     print(counter1)
+#     print(counter2)
+#     return counter1 == counter2
+
+
+# print(is_anogram("mosh", "shom"))
+
+################################################
+
+# from collections import Counter, defaultdict
+
+# def build_counter(word):
+#     counter = defaultdict(int)
+#     for char in word:
+#         counter[char] += 1
+#     return counter
+
+# def is_anogram(word1:str, word2:str) -> bool:
+
+#     counter = build_counter(word1)
+
+#     for char in word2:
+#         counter[char] -= 1
+#     return all(val == 0 for val in counter.values())
+#     # for val in counter.values():
+#     #     if val != 0:
+#     #         return False
+#     # return True
+
+# print(is_anogram("mosh", "shom"))
+
+###############################################
+# def build_counter(word):
+#     counter = dict()
+#     for char in word:
+#         if char not in counter:
+#             counter[char] = 1
+#             continue
+#         counter[char] += 1
+#     return counter
+
+
+# def is_anogram(word1:str, word2:str) -> bool:
+
+#     counter1 = build_counter(word1)
+#     counter2 = build_counter(word2)
+#     print(counter1)
+#     print(counter2)
+#     return counter1 == counter2
+
+
+# print(is_anogram("mosh", "shom"))
+######################################################
+
+
+#######################################################
+# def is_anogram(word1:str, word2:str) -> bool:
+
+#     counter1 = dict()
+#     counter2 = dict()
+
+#     for char in word1:
+#         if char not in counter1:
+#             counter1[char] = 1
+#             continue
+#         counter1[char] += 1
+
+#     for char in word2:
+#         if char not in counter2:
+#             counter2[char] = 1
+#             continue
+#         counter1[char] += 1
+
+#     return counter1 == counter2
+
+# print(is_anogram("mosh", "shom"))
+
+#####################################################
+
+
+# Misol: 
+# two_sum([1,4,5,2], 3) => True
+# two_sum([1,4,5,2], 8) => False
+
+
+# def two_sum(arr: list[int], target: int) -> bool:
+#     complements = {}
+
+#     for index, num in enumerate(arr):
+#         print("ayr:",target - num)
+#         complements[target - num] = index
+#     print(complements)
+
+#     for index, num in enumerate(arr):
+#         if num in complements and complements[num] != index:
+#             # print(num, index)
+#             return True
+#     return False
+
+# print(two_sum([1,4,5,2], 3))
+
+
+# def enumerate_func(lst: list[int]) -> int:
+
+#     for index, num in enumerate(lst):
+#         print('index:',index, 'number:',num)
+# print("Index va o'sha index'dagi son:\n")
+# enumerate_func(lst = [12,25,3,4,42])
+
+
