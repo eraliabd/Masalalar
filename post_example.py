@@ -1111,3 +1111,54 @@ print(col_1, col_2, col_3)
 # enumerate_func(lst = [12,25,3,4,42])
 
 
+# regex
+import re
+from tkinter import N
+# re.search
+# boshlanishi va tugash va boshqa hallarni tekshiradi.
+text = "hello guys what is guys"
+
+text_start = re.search('^h', text)
+text_end = re.search('s$', text)
+text_none = re.search('y$', text)
+
+print(text_start)
+print(text_end)
+print(text_none)
+
+if text_start and text_end:
+    print('Yes')
+else:
+    print('No')
+
+# re.findall
+# matnni ichidan kiritgan so'zni izlab topib list ko'rinishida qirqib oladi.
+re_text1 = re.findall('^hello', text)
+print(re_text1)
+
+# re.split
+# bo'sh joy bo'yicha split qiladi.
+text_split = re.split("\s", text)
+text_split_2 = re.split("\s", text, 2)
+print(text_split)
+print(text_split_2)
+
+# re.sub
+# bo'sh joyni berilgan belgi bilan almashtirib beradi va soni bo'yicha ham yuqoridagi ishni bajaradi
+text_sub = re.sub("\s", "5", text)
+text_sub_2 = re.sub("\s", "5", text, 2)
+print(text_sub)
+print(text_sub_2)
+
+
+
+
+n = 125
+
+S = n ** 2
+P = 4 * n
+
+print("Yuzasi:",S)
+print("Peremetri:",P)
+
+
