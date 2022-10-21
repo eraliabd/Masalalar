@@ -1162,3 +1162,24 @@ print("Yuzasi:",S)
 print("Peremetri:",P)
 
 
+####### 2-qism ###########
+# regex
+import re
+# re.search
+# boshlanishi va tugash va boshqa hallarni tekshiradi.
+text = "hello guys what is hi"
+
+text1= re.search(r'\bg\w+', text)
+text2 = re.search(r'\bg\w+', text)
+text3 = re.search(r'\bg\w+', text)
+
+
+# span() boshlanish va yakuniy pozitsiyalarini o'z ichiga olgan tuple qaytaradi.
+print(text1.span())
+# funktsiyaga kiritilgan satrni chop etadi.
+print(text2.string)
+# group() satrning mos keladigan qismini qaytaradi
+print(text3.group())
+
+
+
