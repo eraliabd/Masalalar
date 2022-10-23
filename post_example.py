@@ -1182,4 +1182,21 @@ print(text2.string)
 print(text3.group())
 
 
+######## dict and input #########
+# user_info = dict()
+
+# name = input(">>> Enter Name:")
+# user_info["name"] = name
+
+# username = input(f">>> {name} enter username:")
+# user_info["username"] = username
+
+# email = input(f">>> {name} enter email:")
+# user_info["email"] = email
+
+# password = input(f">>> {name} enter password:")
+# user_info["password"] = password
+
+# print(f"User info:\n\nName: {name}\nUsername: {username}\nE-mail: {email}\nPassword: {password}")
+# print(f"Dictionary:\n{user_info}")
 
