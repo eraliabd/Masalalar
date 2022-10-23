@@ -1200,3 +1200,29 @@ print(text3.group())
 # print(f"User info:\n\nName: {name}\nUsername: {username}\nE-mail: {email}\nPassword: {password}")
 # print(f"Dictionary:\n{user_info}")
 
+####### list ##########
+mylist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(mylist)
+# ro'yxat elementlariga kirish
+print(mylist[0])
+print(mylist[-1])
+print(mylist[:2])
+print(mylist[4:])
+print(mylist[-3:-1])
+print(mylist[2:6])
+
+# ro'yxat elementlarini o'zgartirish
+mylist[1] = "watermelon"
+print(mylist)
+mylist[1:2] = ["blackcurrant", "watermelon"]
+print(mylist)
+# ro'yxatga element qo'shish
+# insert() - berilgan indexga ro'yxat elementini kiritish
+mylist.insert(4, "watermelon")
+print(mylist)
+mylist.append("watermelon")
+print(mylist)
+tuple_e = ("kiwi", "orange")
+mylist.extend(tuple_e)
+print(mylist)
+
