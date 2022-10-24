@@ -1226,3 +1226,21 @@ tuple_e = ("kiwi", "orange")
 mylist.extend(tuple_e)
 print(mylist)
 
+# # rjust
+# string = "hello everybody"
+# right_just = string.rjust(len(string) + 10, '*')
+# print(right_just)
+# right_just1 = string.rjust(len(string) + 10, '9')
+# print(right_just1)
+# right_just2 = string.rjust(len(string) + 10, 'a')
+# print(right_just2)
+
+# # ljust
+# string = "hello everybody"
+# left_just = string.ljust(len(string) + 10, '*')
+# print(left_just)
+# left_just1 = string.ljust(len(string) + 10, 'a')
+# print(left_just1)
+# left_just2 = string.ljust(len(string) + 10, '5')
+# print(left_just2)
+
