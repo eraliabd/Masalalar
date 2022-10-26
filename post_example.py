@@ -1244,3 +1244,17 @@ print(mylist)
 # left_just2 = string.ljust(len(string) + 10, '5')
 # print(left_just2)
 
+# random sorting
+from random import randint
+
+n = int(input("Enter a Number: "))
+number_list = []
+for i in range(n):
+    number_list.append(randint(1, 99))
+print(number_list)
+
+for i in range(n - 1):
+    for j in range(n-i-1):
+        if number_list[j] > number_list[j+1]:
+            number_list[j], number_list[j+1] = number_list[j+1], number_list[j]
+print(number_list)
