@@ -1258,3 +1258,17 @@ for i in range(n - 1):
         if number_list[j] > number_list[j+1]:
             number_list[j], number_list[j+1] = number_list[j+1], number_list[j]
 print(number_list)
+
+
+# class
+class Car:
+    def __init__(self, top_speed: int) -> None:
+        self.top_speed = top_speed
+
+    def drive(self):
+        print("Driving")
+
+def create_fast_car_(car_class: type[Car], top_speed: int):
+    return car_class(top_speed=top_speed)
+create_fast_car_(Car, 120).drive()
+
