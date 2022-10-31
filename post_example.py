@@ -1298,3 +1298,27 @@ arr = np.array([1, 2, 3, 4], dtype=int)
 
 print(arr)
 print(type(arr))
+
+# string format
+number = 50
+text = "Number: {}"
+text1 = "Number: {:.4f}"
+print(text.format(number))
+print(text1.format(number))
+
+years = 7
+months = 254
+days = 52
+my_order = "Years: {} Months: {} Days {:.2f}"
+my_order1 = "Years: {0} Months: {1} Days {2:.2f}"
+print(my_order.format(years, months, days))
+print(my_order1.format(years, months, days))
+
+my_order2 = "Car Name: {car_name}, Model: {model}."
+print(my_order2.format(car_name = "Malibu", model = "GM"))
+
+age = 36
+name = "Olim"
+info = "His name is {1}. {1} is {0} years old."
+print(info.format(age, name))
+
