@@ -1272,3 +1272,29 @@ def create_fast_car_(car_class: type[Car], top_speed: int):
     return car_class(top_speed=top_speed)
 create_fast_car_(Car, 120).drive()
 
+
+import numpy as np
+import scipy as sp
+import matplotlib as mp
+import pandas as pd
+import sklearn as sl
+import seaborn as sb
+
+import numpy
+import scipy
+import matplotlib
+import pandas
+import sklearn
+import seaborn
+
+# pip install numpy
+# pip install pandas
+# pip install scipy
+# pip install matplotlib
+# pip install seaborn
+# pip install scikit-learn
+
+arr = np.array([1, 2, 3, 4], dtype=int)
+
+print(arr)
+print(type(arr))
