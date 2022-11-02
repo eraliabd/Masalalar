@@ -1322,3 +1322,26 @@ name = "Olim"
 info = "His name is {1}. {1} is {0} years old."
 print(info.format(age, name))
 
+
+# "%s" string format operatori
+print("Hello guys, %s is format"%"this")
+
+text = "you"
+print("What do %s do?"%(text))
+print("Are %s learning %s?"%(text, 'English'))
+
+# butun sonlar uchun '%d' format operatori ishlatiladi.
+print("John %d years old"%15)
+
+# %a.bf
+# a satrda mavjud bo'lgan raqamlarning minimal soni hisoblanadi.
+# "bf" kasrdan keyin qancha raqam ko'rsatilishini bildiradi.
+print('The value of pi is: %3.2f'%(3.141592))
+print('Floating point numbers: %1.0f' %(13.144))
+
+variable = 12
+string = "Variable as integer = %d \n\
+Variable as float = %f" %(variable, variable)
+print (string)
+
+
