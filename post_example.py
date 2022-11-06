@@ -1345,3 +1345,22 @@ Variable as float = %f" %(variable, variable)
 print (string)
 
 
+# f-string format
+text = 'Format'
+print(f"{text}, this is {text}.")
+ 
+ 
+name = 'Alisher'
+age = 21
+print(f"Hello, My name is {name} and I'm {age} years old.")
+
+import datetime
+# f-string vaqtlar bilan ishlashga qulay
+# bu ro'yxatni yana kengaytirish mumkin
+today = datetime.datetime.today()
+print(f"{today:%B %d, %Y}")
+print(f"{today:%d-%m-%Y}")
+print(f"{today:%D}")
+# F-string eng ko'p qo'llaniladigan ikkita string formatlash mexanizmlaridan tezroqdir, ular % formatlash va str.format().
+
+
