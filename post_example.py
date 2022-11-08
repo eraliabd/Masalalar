@@ -1363,4 +1363,46 @@ print(f"{today:%d-%m-%Y}")
 print(f"{today:%D}")
 # F-string eng ko'p qo'llaniladigan ikkita string formatlash mexanizmlaridan tezroqdir, ular % formatlash va str.format().
 
+###########################################
+Python-da Array va List farqi 👇🏻
+
+Ro'yxat(List) Pythonga oʻrnatilgan va elementlar toʻplamini saqlaydigan maʼlumotlar strukturasidir. 
+Ro'yxat xususiyatlari: tartiblangan, oʻzgaruvchan, obyektlar takrorlanadi, har xil turdagi ma'lumotlarga ega bo’ladi.
+
+Massiv(Array) esa elementlar to'plamini saqlaydigan ma'lumotlar strukturasidir. 
+Massiv xususiyatlari: tartiblangan, oʻzgaruvchan, obyektlar takrorlanadi.
+
+Ammo massivning turli xil ma'lumotlar turlarini saqlash qobiliyati haqida gap ketganda, javob unchalik oddiy emas. Bu ishlatiladigan massiv turiga bog'liq.
+
+Python-da massivlardan foydalanish uchun siz massiv modulini yoki NumPy paketini import qilishingiz kerak .
+
+import array as arr
+import numpy as np
+
+array moduli barcha massiv elementlarini bir xil turdagi bo'lishini talab qiladi. Va qiymat turini kiritishingiz kerak bo’ladi.
+
+array1 = arr.array("i", [2, 4, 8, 16])
+
+Boshqa tomondan, NumPy massivlari turli xil ma'lumotlar turlarini qo'llab-quvvatlaydi.
+
+array2 = np.array(["numbers", 2, 4, 8, 16])
+
+Xo’sh farq nimada? 🤔
+
+Massivlar e'lon qilinishi kerak. Ro'yxatlar yo'q. 
+Massivlar ma'lumotlarni juda ixcham saqlashi mumkin va katta hajmdagi ma'lumotlarni saqlash uchun samaraliroqdir.
+Massivlar raqamli operatsiyalar uchun juda yaxshi; ro'yxatlar to'g'ridan-to'g'ri matematik operatsiyalarni bajara olmaydi. Masalan, massivning har bir elementini faqat bitta kod qatori bilan bir xil raqamga bo'lishingiz mumkin. Agar siz ro'yxat elementini bilan bir xil raqamga bo’lsangiz, xatoga yo'l qo'yasiz.
+
+array = np.array([3, 6, 9, 12])
+division = array/3
+print(division)
+# [1. 2. 3. 4.]
+
+lst = [3, 6, 9, 12]
+division = lst/3
+print(division)
+# TypeError: unsupported operand type(s) for /: 'list' and 'int'
+
+Albatta, ro‘yxat yordamida matematik amalni bajarish mumkin, ammo bu unchalik samarali emas.
+#############################################
 
