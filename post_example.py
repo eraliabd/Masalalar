@@ -1406,3 +1406,15 @@ print(division)
 Albatta, ro‘yxat yordamida matematik amalni bajarish mumkin, ammo bu unchalik samarali emas.
 #############################################
 
+# callback function
+def callback(a, b):
+    print(f'Sum = {a+b}')
+
+def main(a,b,func=None):
+    print('Add any two numbers')
+    if func is not None:
+        func(a,b)
+
+one, two = map(int, input("Enter numbers: ").split())
+main(one, two, callback)
+
