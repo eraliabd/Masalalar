@@ -1418,3 +1418,32 @@ def main(a,b,func=None):
 one, two = map(int, input("Enter numbers: ").split())
 main(one, two, callback)
 
+
+# Speach to text Stt
+# __author__ = 'NORMATOV S.'
+# import speech_recognition as stt
+# r = stt.Recognizer()
+# with stt.Microphone() as source:
+#     print("Gapirishni boshlang, vaqt ketdi");
+#     audio = r.listen(source)
+#     print("Vaqt tugadi. Rahmat")
+# try:
+#     print("Text: " + r.recognize_google(audio));
+# except:
+#     pass;
+    
+# Python  Dictionary
+person = {
+  "first_name": "Alisher",
+  "last_name": "Aliyev",
+  "age": 22,
+  "email": "alisheraliyev@gmail.com",
+  "username": "aliali",
+}
+
+items = person.items()
+keys = person.keys()
+values = person.values()
+
+print(f"Items: {items}\nKeys: {keys}\nValues: {values}")
+
