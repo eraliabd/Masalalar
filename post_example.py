@@ -1447,3 +1447,23 @@ values = person.values()
 
 print(f"Items: {items}\nKeys: {keys}\nValues: {values}")
 
+
+# OpenPyXL
+# pip install openpyxl
+import openpyxl
+
+def user_data_read(file_name):
+    users = openpyxl.open(file_name, read_only=True)
+    sheet = users.active
+    # print(users)
+
+    data = []
+    keys = ['user_id', 'first_name', 'last_name', 'age']
+
+    for row in sheet.iter_rows(min_col=2, max_col=5, min_row=2, max_row=5):
+        data_dict = dict(zip(keys, (cell.value for cell in row)))
+        data.append(data_dict)
+        # print(data_dict)
+    print(data)
+user_data_read("user_data.xlsx")
+
