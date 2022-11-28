@@ -1467,3 +1467,46 @@ def user_data_read(file_name):
     print(data)
 user_data_read("user_data.xlsx")
 
+
+# Python-da polimorfizm-ning bir ko'rinishi
+class Error:
+    def get_result(self):
+        return "get_pr() method does not exist"
+    
+class Restangle(Error):
+    def __init__(self, w, h) -> None:
+        self.w = w
+        self.h = h
+
+    def get_result(self):
+        return 2*(self.w + self.h)
+    
+
+class Square(Error):
+    def __init__(self, n) -> None:
+        self.n = n
+
+    def get_result(self):
+        return 4*self.n
+
+class Triangle(Error):
+    def __init__(self, a, b, c) -> None:
+        self.a = a
+        self.b = b
+        self.c = c
+    
+    # def get_result(self):
+    #     return self.a + self.b + self.c
+    
+r1 = Restangle(3, 4)
+r2 = Restangle(5, 6)
+s1 = Square(5)
+s2 = Square(8)
+t1 = Triangle(3, 4, 5)
+t2 = Triangle(1, 3, 6)
+
+lst = [r1, r2, s1, s2, t1, t2]
+for l in lst:
+    print(l.get_result())
+
+   
