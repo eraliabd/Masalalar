@@ -1471,7 +1471,7 @@ user_data_read("user_data.xlsx")
 # Python-da polimorfizm-ning bir ko'rinishi
 class Error:
     def get_result(self):
-        return "get_pr() method does not exist"
+        return "get_result() method does not exist"
     
 class Restangle(Error):
     def __init__(self, w, h) -> None:
