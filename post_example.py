@@ -1509,4 +1509,55 @@ lst = [r1, r2, s1, s2, t1, t2]
 for l in lst:
     print(l.get_result())
 
-   
+####################
+# year = int(input("Yilni kiriting: "))
+
+# if year == 2022:
+#     print(f"Siz {year}-yilning birinchi qish kunidasiz!")
+# elif year < 2022 and len(str(year)) >=4:
+#     print("Adashdingiz. Mantiqan xato!")
+# elif year > 2022:
+#     print(f"Siz {year - 2022} yilga qariysiz!")
+# else:
+#     print("Don't stupid")
+###################
+
+# break
+text = "python"
+
+# for
+for letter in text:
+    print(letter)
+    if letter == "t":
+        break
+print("For tsiklidan tashqarida!")
+print()
+
+# while
+i = 0
+while True:
+    print(text[i])
+
+    if text[i] == 't':
+        break
+    
+    i += 1
+print("While tsiklidan tashqarida!")
+
+# continue
+for i in range(1, 10):
+
+    if i == 4 or i == 7:
+        continue
+    else:
+        print(i, end=" ")
+
+# pass
+print()
+text = "cup"
+for t in text:
+
+    if t == "u":
+        print("pass bajarildi!")
+        pass
+    print(t)
