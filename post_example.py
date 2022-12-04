@@ -1561,3 +1561,37 @@ for t in text:
         print("pass bajarildi!")
         pass
     print(t)
+
+   
+#############
+# 3 ta sondan kattasini topish dasturi
+import time
+a, b, c = list(map(int, input("Sonlarni kiriting: ").split()))
+
+start1 = time.time()
+if a > b and a > c:
+    print(f"{a} soni eng katta")
+elif b > a and b > c:
+    print(f"{b} soni eng katta")
+elif c > a and c > b:
+    print(f"{c} soni eng katta")
+end1 = time.time()
+
+start2 = time.time()
+if a > b:
+    if a > c:
+        print(f"{a} soni eng katta")
+    else:
+        print(f"{c} soni eng katta")
+else:
+    if b > c:
+        print(f"{b} soni eng katta")
+    else:
+        print(f"{c} soni eng katta")
+end2 = time.time()
+
+time1 = end1 - start1
+time2 = end2 - start2
+print(time1, time2)
+
+
