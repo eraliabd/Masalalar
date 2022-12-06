@@ -1595,3 +1595,14 @@ time2 = end2 - start2
 print(time1, time2)
 
 
+# Python-da statistics moduli
+# o'rtacha qiymatni hisoblash mean() funksiyasi orqali
+import statistics
+
+lst1 = [1, 3, 5, 7, 9, 11, 13]
+lst2 = [1, 3, 5, 7, 9, 11]
+
+avg1 = statistics.mean(lst1)
+avg2 = statistics.mean(lst2)
+
+print(f"Average1: {avg1}\nAverage2: {avg2}")
