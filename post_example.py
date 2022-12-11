@@ -1621,4 +1621,9 @@ filtered = filter(func, sequence)
 print("Filtrlangan harflar:")
 for f in filtered:
     print(f)
+# 2-usul
+letters = ['a', 'i', 'e', 'o', 'u']
+sequence = input("Harflarni kiriting: ")
 
+check = list(filter(lambda x : x in letters, sequence))
+print(f"Filtrlangan harflar:\n{check}")
