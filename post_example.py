@@ -1606,3 +1606,19 @@ avg1 = statistics.mean(lst1)
 avg2 = statistics.mean(lst2)
 
 print(f"Average1: {avg1}\nAverage2: {avg2}")
+
+############### filter() ############
+def func(variable):
+    letters = ['a', 'i', 'e', 'o', 'u']
+    if variable in letters:
+        return True
+    else:
+        return False
+
+sequence = ['g', 'e', 'm', 'j', 'u', 'k', 's', 'p']
+filtered = filter(func, sequence)
+
+print("Filtrlangan harflar:")
+for f in filtered:
+    print(f)
+
