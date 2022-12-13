@@ -1627,3 +1627,28 @@ sequence = input("Harflarni kiriting: ")
 
 check = list(filter(lambda x : x in letters, sequence))
 print(f"Filtrlangan harflar:\n{check}")
+
+
+####### linking classes ###########
+# class-larning bir-biri bilan bog'lanishi
+class Salary:
+    def __init__(self, pay):
+        self.pay = pay
+
+    def get_total(self):
+        return self.pay * 12
+
+class Employee:
+    def __init__(self, pay, bonus):
+        self.pay = pay
+        self.bonus = bonus
+        self.salary = Salary(self.pay)
+
+    def get_bonus(self):
+        return self.bonus * 12
+    
+    def get_salary(self):
+        return f"Total salary: ${self.salary.get_total() + self.get_bonus()}"
+
+employee = Employee(500, 200)
+print(employee.get_salary())
