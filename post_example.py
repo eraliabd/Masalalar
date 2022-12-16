@@ -1652,3 +1652,18 @@ class Employee:
 
 employee = Employee(500, 200)
 print(employee.get_salary())
+
+
+############################################
+a = int(input("a sonini kiriting: "))
+b = int(input("b sonini kiriting: "))
+
+if a < b:
+    for i in range(a, b+1):
+        for j in range(i):
+            print(i, end=" ")
+        print("")
+else:
+    print("Xato! a soni b sonidan katta va teng bo'lmasligi kerak.\n"
+        "Eslatma: a soni b sonidan kichik bo'lishi shart!")
+    
