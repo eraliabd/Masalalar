@@ -1667,3 +1667,16 @@ else:
     print("Xato! a soni b sonidan katta va teng bo'lmasligi kerak.\n"
         "Eslatma: a soni b sonidan kichik bo'lishi shart!")
     
+############################################
+
+from translate import Translator
+
+res_lst = ['Natija', 'Result', 'Результат']
+from_lans = input("Tilni kiriting: ")
+word = input("Matnni kiriting: ")
+to_lans = input("Tilni kiriting: ")
+
+translator = Translator(from_lang=from_lans, to_lang=to_lans)
+translation = translator.translate(word)
+
+print(translation)
