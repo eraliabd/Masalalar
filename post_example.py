@@ -1680,3 +1680,41 @@ translator = Translator(from_lang=from_lans, to_lang=to_lans)
 translation = translator.translate(word)
 
 print(translation)
+
+########## FastAPI #########
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"result": "Hello World"}
+
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, query: Union[str, None] = None):
+    return {"item_id": item_id, "query": query}
+
+######### Web Server #############
+# Python yordamida kichik web server ning ko'rinishi
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class web_server(BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/':
+            self.path = '/index.html'
+        try:
+            file_to_open = open(self.path[1:]).read()
+            self.send_response(200)
+        except:
+            file_to_open = "Not Found Error:404"
+            self.send_response(404)
+        self.end_headers()
+        self.wfile.write(bytes(file_to_open, 'utf-8'))
+httpd = HTTPServer(('localhost', 8080), web_server)
+httpd.serve_forever()
+
+
