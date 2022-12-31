@@ -1717,4 +1717,16 @@ class web_server(BaseHTTPRequestHandler):
 httpd = HTTPServer(('localhost', 8080), web_server)
 httpd.serve_forever()
 
+########## Django models ###########
+from django.db import models
+from django.contrib.auth.models import User
 
+class Post(models.Model):
+    # relations
+    admin = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    # fields
+    image = models.ImageField(upload_to='post_img')
+    title = models.CharField(max_length=255, null=True, blank=True)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
