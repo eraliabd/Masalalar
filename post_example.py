@@ -1730,3 +1730,52 @@ class Post(models.Model):
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+ 
+    
+####### match case ########
+def http_error(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+status = int(input("Enter a status: "))
+print(http_error(status=status))
+
+######## Dict(Lug'at) elementlariga kirish ########
+dictionary = {
+    "person1": {
+        "name": "John Doe",
+        "age": 24,
+        "job": "Doctor",
+        "car": "Mustang"
+    },
+
+    "person2": {
+        "name": "Jek Johns",
+        "age": 32,
+        "job": "Programmer",
+        "car": "Tesla"
+    },
+
+    "skills": [
+        "Python", "Java", "C++", "PHP", "GO", "C#", "JavaScript"
+    ],
+}
+name = dictionary["person1"]["name"]
+print(name)
+
+# job = dictionary.get("person2").get("job")
+job = dictionary.get("person2")["job"]
+print(job)
+
+skill = dictionary.get("skills")[0]
+print(skill)
+
+
+#######  ######
