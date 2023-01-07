@@ -1801,3 +1801,25 @@ for i in range(1, n+1):
 
 # for  address in net:
 #     print(address)    
+
+###### Video to Gif ######
+# Video to Gif
+from moviepy.editor import VideoFileClip
+clip = VideoFileClip("video.mp4")
+clip.write_gif("mygif.gif")
+
+####### Write text on video  ########
+from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
+
+video = VideoFileClip("talaba.mp4").subclip(50,60)
+txt_clip = (TextClip("Talabalik davrim 2023", fontsize=70, color='black')
+            .set_position('center')
+            .set_duration(10) )
+
+result = CompositeVideoClip([video, txt_clip])
+result.write_videofile("my_student_period.webm",fps=25)
+
+########   #########
+
+
+
