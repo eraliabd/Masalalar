@@ -1820,6 +1820,21 @@ result = CompositeVideoClip([video, txt_clip])
 result.write_videofile("my_student_period.webm",fps=25)
 
 ########   #########
+import psycopg2
+from pprint import pprint
 
+conn = psycopg2.connect(
+   database="lesson",
+   user='postgres', 
+   password='aeb1205sql', 
+   host='localhost', 
+   port= '5432'
+)
+cursor = conn.cursor()
+
+cursor.execute("""SELECT * FROM users ORDER BY id""")
+pprint(cursor.fetchall())
+
+pprint("CONNECTED")
 
 
