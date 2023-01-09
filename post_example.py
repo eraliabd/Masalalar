@@ -1819,7 +1819,7 @@ txt_clip = (TextClip("Talabalik davrim 2023", fontsize=70, color='black')
 result = CompositeVideoClip([video, txt_clip])
 result.write_videofile("my_student_period.webm",fps=25)
 
-########   #########
+######## Connection to PostgreSQL in Python  #########
 import psycopg2
 from pprint import pprint
 
@@ -1837,4 +1837,5 @@ pprint(cursor.fetchall())
 
 pprint("CONNECTED")
 
+#############     #############
 
