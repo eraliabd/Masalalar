@@ -1837,5 +1837,16 @@ pprint(cursor.fetchall())
 
 pprint("CONNECTED")
 
-#############     #############
+#############  Anagram check   #############
+# Anagrm tekshiruvi
+from collections import Counter
 
+str1 = 'Python'
+str2 = 'thyPon'
+
+print(Counter(str1) == Counter(str2))
+
+str3 = 'Python love'
+str4 = 'Python hate'
+
+print(Counter(str3) == Counter(str4))
