@@ -1850,3 +1850,14 @@ str3 = 'Python love'
 str4 = 'Python hate'
 
 print(Counter(str3) == Counter(str4))
+
+# Email slicer with Python
+email = input("Enter Your Email: ").strip()
+
+username = email[:email.index("@")]
+domain_name = email[email.index("@"):]
+
+result = f"Your user name is '{username}' and your domain is '{domain_name}'"
+print(result)
+
+
