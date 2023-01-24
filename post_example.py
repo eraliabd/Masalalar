@@ -1860,4 +1860,17 @@ domain_name = email[email.index("@"):]
 result = f"Your user name is '{username}' and your domain is '{domain_name}'"
 print(result)
 
+# shuffle function
+from random import shuffle
+
+num_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+letter_lst = ['A', 'B', 'C', 'D', 'E', 'F']
+
+shuffle(num_lst)
+shuffle(letter_lst)
+
+print(num_lst)
+print(letter_lst)
+
+
 
