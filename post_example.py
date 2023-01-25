@@ -1873,4 +1873,23 @@ print(num_lst)
 print(letter_lst)
 
 
+# Send an SMS Using Twilio
+
+  import os
+  from twilio.rest import Client
+
+
+  account_sid = "ACba1cf469702bb254c4aadc4ff437e930"  
+  auth_token  = "your_auth_token"
+  #account_sid = os.environ['TWILIO_ACCOUNT_SID']
+  #auth_token = os.environ['TWILIO_AUTH_TOKEN']
+
+  client = Client(account_sid, auth_token)
+
+  message = client.messages.create(
+      from_="+99899XXXXXXX",
+      to="+99899XXXXXXX",
+      body="Hello my friend")
+
+  print(message.sid)
 
