@@ -1893,3 +1893,41 @@ print(letter_lst)
 
   print(message.sid)
 
+    
+# # Online shop 1-method
+# n = int(input("Nechta mahsulot olasiz sonini kiriting: "))
+# mahsulotlar = ["tuz", "shakar", "un", "yog'", "guruch", "go'sht", "non", "qaymoq", "gugurt", "piyoz"]
+
+# savat = []
+# i = 1
+# while i > 0:
+#     if i == n+1:
+#         break
+#     kirit = input(f"{i}-mahsulotni kiriting: >>>")
+#     if kirit in mahsulotlar:
+#         savat.append(kirit)
+#         print("Mahsulot do'konimizda bor!")
+#     else:
+#         print("Mahsulot do'konimizda yo'q!")
+    
+#     i += 1
+# print(f"Bizning do'kondan xarid qilgan mahsulotlaringiz:\n{savat}")
+
+# Online shop 2-method
+n = int(input("Nechta mahsulot olasiz sonini kiriting: "))
+mahsulotlar = ["tuz", "shakar", "un", "yog'", "guruch", "go'sht", "non", "qaymoq", "gugurt", "piyoz"]
+
+savat = []
+
+for i in range(n):
+    kirit = input(f"{i+1}-mahsulotni kiriting: >>> ")
+
+    if kirit in mahsulotlar:
+        savat.append(kirit)
+        print("Mahsulot do'konimizda bor!")
+    else:
+        print("Mahsulot do'konimizda yo'q!")
+
+print(f"Bizning do'kondan xarid qilgan mahsulotlaringiz:\n{savat}")
+
+
