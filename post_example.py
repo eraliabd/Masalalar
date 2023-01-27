@@ -1931,3 +1931,34 @@ for i in range(n):
 print(f"Bizning do'kondan xarid qilgan mahsulotlaringiz:\n{savat}")
 
 
+# # Palindrom number in python
+# num = int(input("Enter a value:"))
+
+# def is_palindrom(num): 
+#     temp = num  
+#     rev = 0  
+#     while(num > 0):  
+#         dig = num % 10  
+#         rev = rev * 10 + dig
+#         print(rev)
+#         num = num // 10
+#     if(temp == rev):
+#         return True 
+#     else:  
+#         return False
+# print(is_palindrom(num=num))
+
+
+def searchInsert(nums: List(int), target: int) -> int:
+    l = len(nums)
+    if target in nums:
+        print("-- working -- 1")
+        return nums.index(target)
+    if target not in nums:
+        nums.append(target)
+        sorted_nums = sorted(nums)
+        print("-- working -- 2")
+        return sorted_nums.index(target)
+print(searchInsert([-1,3,5,6], 0))
+
+
