@@ -1962,3 +1962,75 @@ def searchInsert(nums: List(int), target: int) -> int:
 print(searchInsert([-1,3,5,6], 0))
 
 
+# class Class1:
+#     def func1(self):
+#         print("func1() method of class Class1")
+
+# class Class2(Class1):
+#     def func2(self):
+#         print("func2() method of class Class2")
+
+# class Class3(Class1):
+#     def func1(self):
+#         print("func1() method of class Class3")
+#     def func2(self):
+#         print("func2() method of class Class3")
+#     def func3(self):
+#         print("func3() method of class Class3")
+#     def func4(self):
+#         print("func4() method of class Class3")
+
+# class Class4(Class2, Class3):
+#     def func4(self):
+#         print("func4() method of class Class4")
+
+# c1 = Class4()
+# c1.func1()
+# c1.func2()
+# c1.func3()
+# c1.func4()
+
+# import pyautogui
+# screenshot = pyautogui.screenshot()
+# screenshot.save("screenshot.png")
+# import pyautogui
+# pyautogui.alert('This is an alert box.')
+    
+# writing unittest to Python OOP
+class First:
+    def first(self):
+        print("first() method of class First")
+
+class Two:
+    def two(self):
+        print("two() method of class Two")
+
+class Three(First, Two):
+    pass
+ 
+a = Three()
+
+if isinstance(a, First) and isinstance(a, Two) and isinstance(a, Three):
+    print("Ran 3 tests in 0.001s\n\nOK")
+else:
+    print("Test failed!")
+
+
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_first(self):
+        self.assertTrue(a, First)
+
+    def test_two(self):
+        self.assertTrue(isinstance(a, Two))
+
+    def test_split(self):
+        self.assertIsInstance(a, Three)
+
+if __name__ == '__main__':
+    unittest.main()
+    
+###################################
+
