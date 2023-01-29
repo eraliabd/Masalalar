@@ -2033,4 +2033,9 @@ if __name__ == '__main__':
     unittest.main()
     
 ###################################
+# def myPow(x: float, n: int) -> float:
+#     result = f"{x**n:.5f}"
+#     return float(result)
+    
 
+# print(myPow(2.00000, 2))
