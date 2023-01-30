@@ -2039,3 +2039,12 @@ if __name__ == '__main__':
     
 
 # print(myPow(2.00000, 2))
+
+#set remove and discard
+thisset = {"apple", "banana", "cherry"}
+
+thisset.remove("banana")
+# thisset.discard("banana")
+
+print(thisset)
+
