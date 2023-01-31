@@ -2048,3 +2048,29 @@ thisset.remove("banana")
 
 print(thisset)
 
+
+
+from fpdf import FPDF
+import uuid
+pdf_name = str(uuid.uuid4()).split('-')[-1]
+# print(pdf_name)
+pdf = FPDF('P', 'mm', 'A4')
+
+pdf.add_page()
+
+pdf.image("pyy.png", 50, 50, 100)
+
+pdf.set_font("Arial", 'B', size=14)
+pdf.set_text_color(220, 50, 50)
+
+pdf.cell(200, 10, txt="Theme: About FPDF class", ln=1, align='C')
+
+f = open('D:\Python\python_OOP/aql.txt', "r")
+for i in f:
+    pdf.cell(200, 10, txt = i, ln = 1, align = 'C')
+
+pdf.cell(200, 10, txt = "Write to Center", ln = 2, align = 'C')
+pdf.cell(200, 10, txt = "Write to Left", ln = 3, align = 'L')
+pdf.cell(190, 10, txt = "Write to Right", ln = 3, align = 'R')
+
+pdf.output(f"pdf_{pdf_name}.pdf")
