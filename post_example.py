@@ -2074,3 +2074,18 @@ pdf.cell(200, 10, txt = "Write to Left", ln = 3, align = 'L')
 pdf.cell(190, 10, txt = "Write to Right", ln = 3, align = 'R')
 
 pdf.output(f"pdf_{pdf_name}.pdf")
+
+# file open with python
+file = open("aql.txt", "r")
+f = file.read()
+print(f)
+
+file.close()
+
+with open('aql.txt', 'r') as file:
+    f = file.read()
+    print(f)
+    
+    
+#########################################
+
