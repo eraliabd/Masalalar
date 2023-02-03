@@ -2114,6 +2114,9 @@ print(name)
 job = getattr(person, "job", "programmer")
 print(job)
 
-job_err = getattr(person, "job")
-print(job_err)
+try:
+    job_err = getattr(person, "job")
+    print(job_err)
+except AttributeError:
+    print("Attribute is not found!")
 
