@@ -2101,5 +2101,19 @@ print(person.job)
 setattr(person, "name", "Jek")
 print(person.name)
 
+# getattr in Python
+class Person:
+    name = "John"
+    age = 35
 
+person = Person()
+
+name = getattr(person, "name")
+print(name)
+
+job = getattr(person, "job", "programmer")
+print(job)
+
+job_err = getattr(person, "job")
+print(job_err)
 
