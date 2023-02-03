@@ -2088,4 +2088,18 @@ with open('aql.txt', 'r') as file:
     
     
 #########################################
+# setattr in Python
+class Person:
+    name = "John"
+    age = 35
+
+person = Person()
+
+setattr(person, "job", "programmer")
+print(person.job)
+
+setattr(person, "name", "Jek")
+print(person.name)
+
+
 
