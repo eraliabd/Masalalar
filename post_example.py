@@ -2133,3 +2133,23 @@ def in_range(*args):
 
 minimum, maximum, give_number = map(int, input("Enter numbers: ").split())
 print(in_range(minimum, maximum, give_number))
+
+# calculator
+def simple_calculator(num1, num2, operator):
+    match operator:
+        case "add":
+            print(f"Sum: {num1 + num2}")
+        case "subtract":
+            print(f"The difference: {num1 - num2}")
+        case "multiply":
+            print(f"Multiple: {num1 * num2}")
+        case "divide":
+            print(f"Division: {num1 / num2}")
+        case _:
+            print("Undefined action")
+
+num1, num2 = map(int, input("Enter numbers: ").split())
+operator = input("Enter operator (for example: 'add', 'subtract', 'multiply', 'divide') >>> ")
+simple_calculator(num1, num2, operator)
+
+
