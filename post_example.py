@@ -2120,3 +2120,16 @@ try:
 except AttributeError:
     print("Attribute is not found!")
 
+    
+############################
+simple example
+def in_range(*args):
+    if args[2] >= args[0] and args[2] <= args[1]:
+        res = f"Berilgan {args[2]} soni {args[0]} va {args[1]} sonlari orasida"
+    else:
+        res = f"Berilgan {args[2]} soni {args[0]} va {args[1]} sonlari orasida emas !!!"
+        
+    return res
+
+minimum, maximum, give_number = map(int, input("Enter numbers: ").split())
+print(in_range(minimum, maximum, give_number))
