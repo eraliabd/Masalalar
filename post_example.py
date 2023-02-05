@@ -2152,4 +2152,16 @@ num1, num2 = map(int, input("Enter numbers: ").split())
 operator = input("Enter operator (for example: 'add', 'subtract', 'multiply', 'divide') >>> ")
 simple_calculator(num1, num2, operator)
 
+# largest
+def get_largest_element(nums: List(int)):
+    largest = nums[0]
+    for i in range(len(nums)):
+        if nums[i] > largest:
+            largest = nums[i]
+
+    return largest
+
+print(get_largest_element([4, 55, 9, 23, 98, 11, 16, 19, 37, 745]))
+
+
 
