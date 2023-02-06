@@ -2163,5 +2163,25 @@ def get_largest_element(nums: List(int)):
 
 print(get_largest_element([4, 55, 9, 23, 98, 11, 16, 19, 37, 745]))
 
+########################
+have and no
+input_word = input("O'ylagan so'zingizni kiriting: ")
+word = bytes(input_word, encoding="utf-8")
+
+with open("stop_words(uz).txt", "rb") as f:
+    words = f.read()
+
+    print(words)
+
+    str_value = words.decode("utf-8")
+    list_value = str_value.split()
+ 
+    if word in words:
+        print("True")
+    else:
+        print("False")
+        
+ ###########
+
 
 
