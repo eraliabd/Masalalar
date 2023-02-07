@@ -2201,5 +2201,13 @@ def roman_to_int(s):
 input_roman = input("Enter Roman a number: ")
 print(roman_to_int(input_roman))
 
-
+def twoSum(nums, target):
+    nums_dict = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in nums_dict:
+            return [nums_dict[complement], i]
+        nums_dict[num] = i
+    return []
+print(twoSum([2,7,11,15],  9))
 
