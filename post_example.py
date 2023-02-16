@@ -2211,3 +2211,23 @@ def twoSum(nums, target):
     return []
 print(twoSum([2,7,11,15],  9))
 
+
+# delete right and left space of the text
+text = "   Python Dev   "
+
+# text length
+print(len(text))
+# 16
+
+# print(len(text.lstrip()))
+# print(len(text.rstrip()))
+
+# delete empty place with strip() method
+clean_text = text.strip()
+
+print(clean_text)
+# Python Dev
+
+# clean text length
+print(len(clean_text))
+# 10
