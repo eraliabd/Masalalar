@@ -2231,3 +2231,19 @@ print(clean_text)
 # clean text length
 print(len(clean_text))
 # 10
+
+
+# Django: Slug
+from django.db import models
+from django.urls import reverse
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    slug = models.SlugField()
+
+    def __str__(self):
+        return self.title
+    
+    def get_absolute_url(self):
+        return reverse("post_detail", kwargs={"slug": self.slug})
