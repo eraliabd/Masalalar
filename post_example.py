@@ -2247,3 +2247,19 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"slug": self.slug})
+    
+    
+####################
+# walrus operator in Python
+words = []
+
+while (word := input("Enter word: ")) != "quit":
+    words.append(word)
+
+print()
+print("*"*33)
+print(words)
+
+n = (m := 5)
+print(n == m)
+
