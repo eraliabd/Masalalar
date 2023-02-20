@@ -2263,3 +2263,34 @@ print(words)
 n = (m := 5)
 print(n == m)
 
+
+# schedule library in Python
+import schedule
+import time
+
+def task1():
+    print("Running task 1...")
+
+def task2():
+    print("Running task 2...")
+
+def task3():
+    print("Running task 3...")
+
+# task1, task2 va task3 funksiyalarini 
+# har daqiqada, sekundda va soatlarda o'z vazifasini bajarishini rejalashtiring
+schedule.every().seconds.do(task1)
+schedule.every(1).minutes.do(task2)
+schedule.every(1).hours.do(task3)
+
+# task2 func har kuni soat 07:00 da ishga tushadi.
+schedule.every().day.at("07:00").do(task2)
+
+# task3 func har dushanba kuni 12:00 da ishga tushadi.
+schedule.every().monday.at("12:00").do(task3)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+    
+####################
