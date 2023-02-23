@@ -2294,3 +2294,13 @@ while True:
     time.sleep(1)
     
 ####################
+n = int(input("Enter a number: "))
+
+for i in range(1, n+1):
+    left_space = ". " * (n-i)
+    right_space = ". " * (n-i)
+    series = ("0 ") * i + "0 " * (i-1)
+    print(left_space + series + right_space)
+    
+    
+#####################
