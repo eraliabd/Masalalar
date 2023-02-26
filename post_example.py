@@ -2304,3 +2304,25 @@ for i in range(1, n+1):
     
     
 #####################
+# Dictionary get() method in Python
+# Sintaksisi: Dict.get(key, default=None)
+
+d = {'coding': 'good', 'thinking': 'better'}
+print(d.get('coding'))
+
+d = {1: '001', 2: '010', 3: '011'}
+# agar 4 kalit so'zi topilmasa default qiymat qaytariladi(Not found)
+print(d.get(4, "Not found"))
+
+test_dict = {'coding': {'is': 'best'}}
+
+# original dictionary
+print("Dictionary: " + str(test_dict))
+
+# dictga ichma-ich kirish
+res = test_dict.get('coding', {}).get('is')
+
+# result
+print("Value: " + str(res))
+
+#########################
