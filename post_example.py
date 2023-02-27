@@ -2326,3 +2326,17 @@ res = test_dict.get('coding', {}).get('is')
 print("Value: " + str(res))
 
 #########################
+Python Encapsulation
+class MyList:
+    def __init__(self, lst):
+        self.__lst = lst
+
+    def my_func(self):
+        res = self.__lst[0][2] + sum(self.__lst[1][1:])
+        return res
+    
+    def lst(self):
+        return self.__lst
+
+my_list = MyList([[1, 2, 5], [6, 8, 10]])
+print(my_list.my_func())
