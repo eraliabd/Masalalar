@@ -2340,3 +2340,24 @@ class MyList:
 
 my_list = MyList([[1, 2, 5], [6, 8, 10]])
 print(my_list.my_func())
+
+######################
+# boltons library in Python
+
+from boltons import strutils
+
+text = "Hello, World"
+
+print(strutils.split_punct_ws(text))
+# ['Hello', 'World']
+
+print(strutils.html2text('<div>Hello friends!</div>'))
+# Hello friends!
+
+print(strutils.find_hashtags('Yes #pip Okey #install Hi #boltons'))
+# ['pip', 'install', 'boltons']
+
+print(strutils.slugify(text))
+# hello_world
+
+#################
