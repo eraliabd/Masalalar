@@ -2361,3 +2361,20 @@ print(strutils.slugify(text))
 # hello_world
 
 #################
+# import json
+
+# with open('data_file.json', 'r') as file:
+#     json_file = json.load(file)
+
+# print(json_file)
+# # print(type(json_file))
+
+# output_value_name = json_file['name']
+# print(output_value_name)
+
+# outpu_value = json_file['programming_language']['Python']
+# print(outpu_value)
+
+# dict_file = {"hi": "salom"}
+# json_dict_file = json.dumps(dict_file)
+# print(type(json_dict_file))
