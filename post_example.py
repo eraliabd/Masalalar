@@ -2378,3 +2378,32 @@ print(strutils.slugify(text))
 # dict_file = {"hi": "salom"}
 # json_dict_file = json.dumps(dict_file)
 # print(type(json_dict_file))
+
+#####################
+# Creating a decorator function in Python
+def validate_inputs(func):
+
+    def wrapper(*args, **kwargs):
+        for arg in args:
+            if not isinstance(arg, int):
+                raise TypeError("All arguments must be integers")
+        for value in kwargs.values():
+            if not isinstance(value, int):
+                raise TypeError("All keyword arguments must be integers")
+
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+@validate_inputs
+def calculate_average(*args, **kwargs):
+    total_sum = sum(args) + sum(kwargs.values())
+    count = len(args) + len(kwargs)
+    return total_sum / count
+
+
+print(calculate_average(1, 2, 3, x=4, y=5, z=6))
+print(calculate_average(1, "two", x=3, y=4))
+
+##############
