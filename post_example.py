@@ -2407,3 +2407,29 @@ print(calculate_average(1, 2, 3, x=4, y=5, z=6))
 print(calculate_average(1, "two", x=3, y=4))
 
 ##############
+#time() module in Python
+
+import time
+
+# time() - 1970-yil 1-yanvar 00:00:00 (UTC) dan 
+# beri o‘tgan soniyalar sonini qaytaradi.
+current_time = time.time()
+print("Current time:", current_time)
+
+# soniyalarni yilga o'tkazish
+until_now_year = ((current_time/3600)/24)/365
+print("Until now:", until_now_year)
+
+# localtime() - "Sun Jun 20 23:21:05 1993” formatidagi qatorga aylantiradi.
+local_time = time.localtime()
+print("Local time:", local_time)
+
+# strptime(string, format)- Format satrida belgilangan formatdagi 
+# vaqtni ifodalovchi qatorni tahlil qiladi va struct_time ni qaytaradi.
+
+# strftime() yordamida joriy vaqtni satr sifatida formatlang
+strf_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+print("Time:", strf_time)
+
+#####################
+
