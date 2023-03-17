@@ -2432,4 +2432,81 @@ strf_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 print("Time:", strf_time)
 
 #####################
+# Example to dict and function
+def home():
+    menu = input("""
+            users list:       1
+            add user:         2
+            update user info: 3
+            delete user:      4
+            search user:      5
+            quit:             0
+        """)
+    if menu.isdigit():
+        main(menu)
+    else:
+        print("Command must be number")
+        home()
 
+users = {}
+
+def add_user():
+    name = input("Enter user name: ")
+    phone_number = input("Enter user phone number: ")
+    users[name] = phone_number
+    home()
+
+def update_user_info():
+    name = input("Enter the user name to update: ")
+    if name in users.keys():
+        phone_number = input("Enter user phone number: ")
+        users[name] = phone_number
+        home()
+    else:
+        print("This user does not exist in the user list")
+        update_user_info()
+
+def delete_user():
+    name = input("Enter the user name to delete: ")
+    if name in users.keys():
+        del users[name]
+        home()
+    else:
+        print("This user does not exist in the user list")
+        delete_user()
+
+def search_user():
+    name = input("Enter the user name to search: ")
+    if name in users.keys():
+        print(f"User name: {name}\nUser phone number: {users[name]}")
+        home()
+    else:
+        print("This user does not exist in the user list")
+        search_user()
+
+def output():
+    print("The process is complete 😊")
+
+
+def main(command):
+    command = int(command)
+    if command == 1:
+        print(users)
+        home()
+    elif command == 2:
+        add_user()
+    elif command == 3:
+        update_user_info()
+    elif command == 4:
+        delete_user()
+    elif command == 5:
+        search_user()
+    elif command == 0:
+        output()
+    else:
+        print("Not found command!!!")
+        home()
+
+home()
+
+###################
