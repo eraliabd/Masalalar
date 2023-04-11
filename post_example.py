@@ -2525,3 +2525,28 @@ if __name__ == '__main__':
         
         
 ##########
+from collections import defaultdict, Counter
+
+words = ['banana', 'apple', 'cherry', 'apple']
+word_counts = defaultdict(int)
+for word in words:
+    word_counts[word] += 1
+
+print(word_counts)
+
+letter_counts = Counter('banana')
+print(letter_counts)
+
+def def_value():
+    return "Not Present"
+
+d = defaultdict(def_value)
+d["a"] = 1
+d["b"] = 2
+
+print(d["a"])
+print(d["b"])
+print(d["c"])
+
+######################
+
