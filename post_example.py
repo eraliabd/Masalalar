@@ -2549,4 +2549,21 @@ print(d["b"])
 print(d["c"])
 
 ######################
+# deque
+from collections import deque
+
+lst = [1, 2, 3, 4, 5]
+de = deque(lst)
+
+de.append(6)
+de.append(7)
+de.appendleft(0)
+de.appendleft(-1)
+
+de.pop()
+de.popleft()
+
+print("deque:", de)
+
+#################
 
