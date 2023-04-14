@@ -2566,4 +2566,23 @@ de.popleft()
 print("deque:", de)
 
 #################
+# is palindrome
+def is_palindrome(string):
+    new_string = ""
+    for i in range(len(string)):
+        if string[i] != " ":
+            new_string += string[i]
+    string = new_string
+    for i in range(len(string)):
+        if string[i].lower() != string[len(string) - i - 1].lower():
+            return False
+    return True
+
+
+
+def is_palindrome(string):
+    string = string.replace(" ", "").lower()
+    return string == string[::-1]
+
+#################
 
