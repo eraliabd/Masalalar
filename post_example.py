@@ -2585,4 +2585,44 @@ def is_palindrome(string):
     return string == string[::-1]
 
 #################
+# Search query in Django
+
+  # views.py faylga quyidagi funksiyani yozamiz
+  from django.db.models import Q
+  from django.shortcuts import render
+  from myapp.models import MyModel
+
+  def my_view(request):
+    query = request.GET.get('q')
+    
+    if query:
+    	instances = MyModel.objects.filter(
+        	Q(title__icontains=query) | Q(description__icontains=query)
+        )
+    else:
+      	instances = MyModel.objects.none()
+        
+    context = {'instances': instances}
+    return render(request, 'search_results.html', context)
+
+  
+  # index.html da GET usuli bilan forma:
+  <form method="get">
+    <input type="search" name="q" />
+    <button type="submit">Search</button>
+  </form>
+
+  
+  # So'rovning search.html sahifada chiqishi:
+  {% if instances %}
+    <ul>
+      {% for instance in instances %}
+          <li>{{ instance.title }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+      <p>No instances found.</p>
+  {% endif %}
+  
+ #####################
 
