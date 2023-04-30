@@ -2625,4 +2625,20 @@ def is_palindrome(string):
   {% endif %}
   
  #####################
+def f(x):
+    def f1(a, b):
+        print("Hello")
+        if b == 0:
+            print("No")
+            return
+        return f(a, b)
+    return f1
+
+@f
+def f(a, b):
+    return a % b
+
+f(6, 0)
+
+####################
 
