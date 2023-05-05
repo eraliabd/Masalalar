@@ -2641,4 +2641,19 @@ def f(a, b):
 f(6, 0)
 
 ####################
+from dataclasses import dataclass
 
+@dataclass
+class User:
+    name: str
+    age: int
+    job: str
+
+    def user_info(self, other):
+        return f"Hodim ma'lumotlari:\nIsmi: {self.name}\nYoshi: {self.age}\nKasbi: {self.job}\nOyligi: {other}"
+
+erali = User("Erali", 23, "Dasturchi")
+print(erali.name)
+print(erali.user_info("$500"))
+
+##############################
