@@ -2657,3 +2657,29 @@ print(erali.name)
 print(erali.user_info("$500"))
 
 ##############################
+nums = [4, -2, 5, 8, -3, 0]
+print("Number list: ", nums)
+
+
+# The primitive way
+def count_negatives(nums):
+    n_negatives = 0
+    for num in nums:
+        if num < 0:
+            n_negatives += 1
+    return n_negatives
+print(f"Number of negative values: {count_negatives(nums)}")
+
+
+# List Comprehension - Traditional way
+def count_negatives(nums):
+    return len([num for num in nums if num < 0])
+print(f"Number of negative values: {count_negatives(nums)}")
+
+
+# List Comprehension - Tricky way
+def count_negatives(nums):
+    return sum([num < 0 for num in nums])
+print(f"Number of negative values: {count_negatives(nums)}")
+
+#############################
