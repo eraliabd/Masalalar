@@ -2683,3 +2683,16 @@ def count_negatives(nums):
 print(f"Number of negative values: {count_negatives(nums)}")
 
 #############################
+import pendulum
+
+dt = pendulum.datetime(2023, 5, 11, tz='Asia/Tashkent')
+print(dt)  # 2023-05-11T00:00:00+05:00
+
+dt = dt.add(days=1).subtract(hours=2)
+
+formatted = dt.format('YYYY-MM-DD HH:mm:ss')
+print(formatted)  # 2023-05-11 22:00:00
+
+###########################
+
+
