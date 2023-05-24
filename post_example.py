@@ -2694,5 +2694,30 @@ formatted = dt.format('YYYY-MM-DD HH:mm:ss')
 print(formatted)  # 2023-05-11 22:00:00
 
 ###########################
+# try block
+
+from django.http import Http404
+from .models import Student
+
+def student_detail(request, pk):
+    try:
+        student = Student.objects.get(id=pk)
+    except Student.DoesNotExist:
+        raise Http404("Student doest not exists")
+
+        # ...
+
+####################################################
+
+# get_object_or_404
+
+from django.shortcuts import get_object_or_404
+from .models import Student
+
+
+def student_detail(request, pk):
+    student = get_object_or_404(Student, id=pk)
+
+    # ...
 
 
