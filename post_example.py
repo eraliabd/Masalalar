@@ -2720,4 +2720,38 @@ def student_detail(request, pk):
 
     # ...
 
+# Product model
+class Product(models.Model):
+    # relations
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    # fields
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    slug = models.SlugField(null=True)
+    image = models.ImageField(upload_to='product/%Y/%m/%d')
+    properties = RichTextField()
+    catalog = models.FileField(upload_to='product_catalog/', null=True)
+    created = models.DateTimeField(auto_now_add=True)
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+#################
+# pip install emoji
+  import emoji
+
+  # find an emoji by emoji name
+  print(emoji.emojize('Python is :thumbs_up:'))
+  # Python is 👍
+  print(emoji.emojize('This :telephone:very nice :smiling_face_with_smiling_eyes:'))
+  # This ☎️ very nice 😊
+
+  # find an emoji name by emoji
+  print(emoji.demojize('Python is 👍'))
+  # Python is :thumbs_up:
+
+  # check emoji
+  print(emoji.is_emoji('👍'))
+  # True
+##############
